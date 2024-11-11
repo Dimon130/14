@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анна & Михаил | Свадебное приглашение</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_API_ключ&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#home">Главная</a>
+            <a href="#story">История</a>
+            <a href="#schedule">Расписание</a>
+            <a href="#dress-code">Дресс-код</a>
+            <a href="#gifts">Подарки</a>
+            <a href="#rsvp">RSVP</a>
+            <a href="#location">Как добраться</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header id="home" class="hero">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Анна & Михаил</h1>
+                <p class="date">20.08.2024</p>
+                <div class="flower-decoration"></div>
+            </div>
+        </header>
+        
+        <main>
+            <section id="story" class="story">
+                <h2 data-aos="fade-up">Наша История</h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-img">
+                            <img src="images/first-meet.jpg" alt="Первая встреча">
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Первая встреча</h3>
+                            <p>История нашей любви началась...</p>
+                        </div>
+                    </div>
+                    <!-- Добавьте больше timeline-item -->
+                </div>
+            </section>
+
+            <section id="schedule" class="schedule" data-aos="fade-up">
+                <h2>Расписание дня</h2>
+                <div class="timeline-vertical">
+                    <div class="event" data-aos="fade-up">
+                        <div class="time">14:00</div>
+                        <div class="event-content">
+                            <h3>Церемония бракосочетания</h3>
+                            <p>Дворец бракосочетания</p>
+                        </div>
+                    </div>
+                    <div class="event" data-aos="fade-up">
+                        <div class="time">16:00</div>
+                        <div class="event-content">
+                            <h3>Праздничный банкет</h3>
+                            <p>Ресторан "Счастье"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="dress-code" class="dress-code" data-aos="fade-up">
+                <h2>Дресс-код</h2>
+                <div class="dress-code-content">
+                    <div class="color-palette">
+                        <div class="color" style="background-color: #F5E6E8;"></div>
+                        <div class="color" style="background-color: #D5B6B2;"></div>
+                        <div class="color" style="background-color: #A26769;"></div>
+                    </div>
+                    <p>Мы будем рады видеть вас в нарядах пастельных оттенков</p>
+                </div>
+            </section>
+
+            <section id="gifts" class="gifts" data-aos="fade-up">
+                <h2>Подарки</h2>
+                <p>Ваше присутствие - лучший подарок для нас, но если вы хотите порадовать нас чем-то особенным...</p>
+                <div class="gift-card">
+                    <i class="envelope-icon"></i>
+                    <p>Конверт для пожеланий будет доступен на празднике</p>
+                </div>
+            </section>
+
+            <section id="rsvp" class="rsvp" data-aos="fade-up">
+                <h2>Подтвердите присутствие</h2>
+                <form id="rsvp-form" class="rsvp-form">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="Телефон" required>
+                    <select required>
+                        <option value="">Присутствие</option>
+                        <option value="yes">Буду присутствовать</option>
+                        <option value="no">К сожалению, не смогу</option>
+                    </select>
+                    <button type="submit">Отправить</button>
+                </form>
+            </section>
+
+            <section id="location" class="location" data-aos="fade-up">
+                <h2>Как добраться</h2>
+                <div id="map" class="map"></div>
+                <div class="location-details">
+                    <p>Рынок "Викалина"</p>
+                    <p>г. Владикавказ, ул. Примерная, д. 123</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
