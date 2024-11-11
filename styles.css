@@ -197,4 +197,109 @@ section {
     height: 200px;
     background: url('images/flower-decoration.png') no-repeat center/contain;
     opacity: 0.6;
+}
+
+/* Добавим новые стили */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.timeline-item {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.timeline-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-img img {
+    transition: transform 0.5s ease;
+}
+
+.timeline-img:hover img {
+    transform: scale(1.1);
+}
+
+.dress-examples {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.dress-example {
+    width: 300px;
+    text-align: center;
+}
+
+.dress-example img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.dress-example:hover img {
+    transform: scale(1.05);
+}
+
+.gifts-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.gift-card {
+    background: rgba(255,255,255,0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.gift-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.gift-images img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Добавим медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .dress-examples {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .gifts-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+    }
 } 
