@@ -69,6 +69,28 @@ body {
     text-align: center;
     position: relative;
     z-index: 1;
+    padding: 2rem;
+}
+
+.couple-image {
+    width: 300px;
+    height: 300px;
+    margin: 2rem auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+.couple-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.couple-image:hover img {
+    transform: scale(1.1);
 }
 
 h1 {
@@ -302,4 +324,160 @@ section {
     .timeline-item {
         flex-direction: column;
     }
-} 
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .date {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .couple-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        margin: 3rem 0;
+    }
+
+    .timeline-img {
+        width: 200px;
+        height: 200px;
+        margin: 1rem auto;
+    }
+
+    .timeline-content {
+        text-align: center;
+    }
+
+    .dress-examples {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dress-example {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 2rem;
+    }
+
+    .gifts-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    section {
+        padding: 3rem 1rem;
+    }
+
+    .event {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .time {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    .nav-links {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-links a {
+        white-space: nowrap;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .date {
+        font-size: 1.2rem;
+    }
+
+    .couple-image {
+        width: 150px;
+        height: 150px;
+        border-width: 5px;
+    }
+
+    .rsvp-form {
+        padding: 0 1rem;
+    }
+
+    .map {
+        height: 300px;
+    }
+
+    .color-palette {
+        gap: 0.5rem;
+    }
+
+    .color {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Добавим стили для плавной прокрутки на мобильных устройствах */
+.nav-links {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.nav-links::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Улучшим читаемость текста на мобильных устройствах */
+@media (max-width: 768px) {
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Добавим стили для улучшения производительности анимаций */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
